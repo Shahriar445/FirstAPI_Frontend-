@@ -25,6 +25,20 @@ body, html {
     width: 100%;
 }
 
+/* Style for the table header */
+#itemTable thead th {
+    background-color: #0ee0e0; /* Background color */
+    color: black; /* Text color */
+    padding: 10px;
+    text-align: left;
+}
+
+/* Optionally, you can add some styling for the table rows and cells */
+#itemTable tbody td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
 .form-item {
     background: #fff;
     padding: 20px;
