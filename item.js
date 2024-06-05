@@ -1,24 +1,37 @@
-let itemIndex=1;
 
 
+document.getElementById('itemForm').addEventListener('submit',handleSubmit);
 
-document.getElementById('itemForm').addEventListener('submit',async function(event){
+async function handleSubmit(event){
     event.preventDefault();
-   
-    const _formData =new FormData(this);
+
+    const itemData=getFormData();
     try{
-        const response = await fetch('https://localhost:7242/CreateItems',
-            {
-                method:'POST',
-               body:_formData
-            }
-        );
-        const result= await response.text();
+        const response =await sendItemData(itemData);
+        const result = await response.text();
         alert(result);
-        alert('success');
     }catch(error)
     {
-        console.error('error',error);
-        alert('Failed create items');
+        console.error('Error',error);
+        alert('Faild to create item');
     }
-});
+}
+
+function getFormData(){
+    return {
+        itemName: document.querySelector('[name="Items.itemName"]').value,
+        numStockQuantity: document.querySelector('[name="Items.NumStockQuantity"]').value,
+        isActive: document.querySelector('[name="Items.IsActive"]').checked
+    };
+}
+
+async function sendItemData(itemData)
+{
+    return fetch('https://localhost:7242/CreateItem',{
+        method:'POST',
+        headers:{
+            'Content-Type': 'application/json'
+        },
+        body:JSON.stringify(itemData)
+    });
+}
