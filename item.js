@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded',async function(){
 document.getElementById('itemForm').addEventListener('submit',handleSubmit);
 
 async function handleSubmit(event){
-    event.preventDefault();
+    event.preventDefault(); // not refresh the tab 
 
     const itemData=getFormData();
     try{

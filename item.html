@@ -4,41 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Item </title>
+    <title>Item Management</title>
 </head>
 <body>
-    <h1>Create Item</h1>
+    <div class="form-div">
+        <div class="form-item"> 
+            <h1>Create Item</h1>
+            <form id="itemForm">
+                <label>Enter Your Item Name</label>
+                <input class="name" type="text" name="Items.itemName" placeholder="Item Name" required>
 
-    <form id="itemForm">
-        <div id="ItemsContainer">
-            <div class="item">
-                <label>Enter Your Item Name</label><br>
-                <input class="name" type="text" name="Items.itemName" placeholder="Item Name" required><br>
-                <label>Item Quantity</label><br>
-                <input class="quantity" type="number" name="Items.NumStockQuantity" placeholder="Item NumStockQuantity" required><br>
-                <input type="checkbox" name="Items.IsActive">Active
-            </div>
+                <label>Item Quantity</label>
+                <input class="quantity" type="number" name="Items.NumStockQuantity" placeholder="Item Quantity" required>
 
+                <div class="checkbox-container">
+                    <input type="checkbox" id="isActive" name="Items.IsActive">
+                    <label for="isActive">Active</label>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
         </div>
-      
-        <button type="submit">Submit</button>
+    </div>
 
-    </form>
-    <h1>Item List</h1>
-    <div id="itemList">
-        <table id="itemTable">
-            <thead>
-                <tr>
-                    <th>Item ID</th>
-                    <th>Item Name</th>
-                    <th>Stock Quantity</th>
-                    <th>Active</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- table row dynamical populated  -->
-            </tbody>
-        </table>
+    <div class="list-div">
+        <h1>Item List</h1>
+        <div id="itemList">
+            <table id="itemTable">
+                <thead>
+                    <tr>
+                        <th>Item ID</th>
+                        <th>Item Name</th>
+                        <th>Stock Quantity</th>
+                        <th>Active</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table rows dynamically populated -->
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <script src="item.js"></script>

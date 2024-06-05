@@ -1,35 +1,143 @@
-table{
-   border: 1px solid;
-   border-collapse:collapse;
-   width: 60%;
+/* General resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
-th{
-    height: 50px;
-    width: 70px;
-    border: 1px solid;
+
+body, html {
+    height: 100%;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Form container styling */
+.form-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.form-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+h1 {
     text-align: center;
-    background-color: #04AA6D;
-  color: white;
-   
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
 }
-td,th{
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="checkbox"] {
+    width: calc(100% - 22px);
     padding: 10px;
-    border-bottom: 1px solid #ddd;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: block;
 }
-td {
+
+input[type="checkbox"] {
+    width: auto;
+    margin: 10px 5px 10px 0;
+}
+
+button {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #3e8e41;
+    transform: scale(1);
+}
+
+/* List container styling */
+.list-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+}
+
+#itemList {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
     text-align: left;
 }
 
-tr:nth-child(even){
-    background-color: #ddd;
-}
-.quantity ,.name{
-    padding: 8px;
-    color: #04AA6D;
-    
-}
-button:hover{
-    background-color: red;
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
 }
 
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
 
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.5); /* Increase size of checkbox */
+}
+
+.checkbox-container label {
+    margin: 0;
+    font-weight: bold;
+}
