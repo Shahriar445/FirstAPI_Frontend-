@@ -1,0 +1,35 @@
+table{
+   border: 1px solid;
+   border-collapse:collapse;
+   width: 60%;
+}
+th{
+    height: 50px;
+    width: 70px;
+    border: 1px solid;
+    text-align: center;
+    background-color: #04AA6D;
+  color: white;
+   
+}
+td,th{
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+td {
+    text-align: left;
+}
+
+tr:nth-child(even){
+    background-color: #ddd;
+}
+.quantity ,.name{
+    padding: 8px;
+    color: #04AA6D;
+    
+}
+button:hover{
+    background-color: red;
+}
+
+

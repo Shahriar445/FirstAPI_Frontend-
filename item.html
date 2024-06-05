@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Item </title>
 </head>
 <body>
-    <h1>Create some Items</h1>
+    <h1>Create Item</h1>
 
     <form id="itemForm">
         <div id="ItemsContainer">
             <div class="item">
-                
-                <input type="text" name="Items.itemName" placeholder="Item Name" required>
-                <input type="number" name="Items.NumStockQuantity" placeholder="Item NumStockQuantity" required>
+                <label>Enter Your Item Name</label><br>
+                <input class="name" type="text" name="Items.itemName" placeholder="Item Name" required><br>
+                <label>Item Quantity</label><br>
+                <input class="quantity" type="number" name="Items.NumStockQuantity" placeholder="Item NumStockQuantity" required><br>
                 <input type="checkbox" name="Items.IsActive">Active
             </div>
 
@@ -22,6 +24,23 @@
         <button type="submit">Submit</button>
 
     </form>
+    <h1>Item List</h1>
+    <div id="itemList">
+        <table id="itemTable">
+            <thead>
+                <tr>
+                    <th>Item ID</th>
+                    <th>Item Name</th>
+                    <th>Stock Quantity</th>
+                    <th>Active</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- table row dynamical populated  -->
+            </tbody>
+        </table>
+    </div>
+
     <script src="item.js"></script>
 </body>
 </html>
